@@ -1,1 +1,5 @@
 node_modules
+Terraform/.terraform.lock.hcl
+Terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/4.62.0/linux_amd64/terraform-provider-aws_v4.62.0_x5
+Terraform/terraform.tfstate
+Terraform/terraform.tfstate.backup
