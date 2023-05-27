@@ -1,0 +1,7 @@
+stages:
+ - test
+
+Test:
+  stage: test
+  script:
+    - echo "Success"
