@@ -1,16 +1,27 @@
+# Creating Cloudfront Identity
+resource "aws_cloudfront_origin_access_identity" "cloudfront_identity" {
+  comment = "Cloude Resume Cloudfront identity"
+}
+
 resource "aws_cloudfront_distribution" "s3_distribution" {
 
   origin {
-    domain_name              = var.domain_name.bucket_regional_domain_name
-    origin_id                = "my-website-s3-origin"
+    domain_name = aws_s3_bucket.cloud_resume.bucket_regional_domain_name
+    origin_id   = "my_website_s3_origin"
+    s3_origin_config {
+      origin_access_identity = aws_cloudfront_origin_access_identity.cloudfront_identity.cloudfront_access_identity_path
+
+    }
   }
 
   enabled             = true
   is_ipv6_enabled     = true
+  default_root_object = "index.html"
+  comment             = "cloud resume cloudfront"
 
 
   default_cache_behavior {
-    target_origin_id = "my-website-s3-origin"
+    target_origin_id = "my_website_s3_origin"
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
 
