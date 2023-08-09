@@ -4,5 +4,7 @@ node {
         nodeImage.inside{
            sh "node -v"
         }
+
+        slackSend color: "good", message: "Message from Jenkins Pipeline"
     }
 }
