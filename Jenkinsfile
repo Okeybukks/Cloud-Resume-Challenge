@@ -12,11 +12,11 @@ node {
     }
     }
     catch(e){
-        def currentStatus = "Failed"
+        currentBuild.result = "Failed"
         throw e
     }
     finally{
-        notifyBuild(currentStatus)
+        notifyBuild(currentBuild.result)
     }
     
 }
