@@ -34,7 +34,7 @@ def call(String buildStatus = "Started"){
             "type": "section",
             "text": [
                 "type": "mrkdwn",
-                "text": "*Message:* ${text}"
+                "text": "*Message:* ${text}\n\n"
             ]
         ]
     ]
