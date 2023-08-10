@@ -14,7 +14,7 @@ node {
             // sh "export NODE_OPTIONS=--openssl-legacy-provider"
             sh "CI=false npm run build"
 
-            archiveArtifacts artifacts: "/build" 
+            archiveArtifacts artifacts: "/build/**" 
         }
     }
     catch(e){
