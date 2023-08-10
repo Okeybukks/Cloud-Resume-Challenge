@@ -2,9 +2,9 @@
 node {
 
     // slackSend color: "good", message: "Starting Deployment to s3"
-
+    notifyBuild("Started")
     try{
-        notifyBuild("Started")
+        
         stage("Build Stage"){
         def nodeImage = docker.image("node:lts-alpine")
         nodeImage.inside{
