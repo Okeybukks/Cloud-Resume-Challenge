@@ -15,7 +15,7 @@ def call(String buildStatus = "Started"){
     }
     else{
         colorCode = "#FF0000"
-        text = "Deployment Faile"
+        text = "Deployment Failed"
     }
 
 
@@ -34,7 +34,7 @@ def call(String buildStatus = "Started"){
             "type": "section",
             "text": [
                 "type": "mrkdwn",
-                "text": "*Message:* ${text}"
+                "text": "*Message:* :star: ${text}"
             ]
         ]
     ]

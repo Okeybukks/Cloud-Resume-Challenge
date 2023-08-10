@@ -8,9 +8,10 @@ node {
         stage("Build Stage"){
         def nodeImage = docker.image("node:lts-alpine")
         nodeImage.inside{
-           sh "npm install"
-           sh "export NODE_OPTIONS=--openssl-legacy-provider"
-           sh "npm run build"
+            sh "npm -v"
+        //    sh "npm install"
+        //    sh "export NODE_OPTIONS=--openssl-legacy-provider"
+        //    sh "npm run build"
            
         }
         archiveArtifacts artifacts: "build" 
