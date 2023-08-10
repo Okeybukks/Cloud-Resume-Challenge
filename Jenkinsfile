@@ -1,7 +1,7 @@
-@Library('shared-library@feature/infra') _
+// @Library('shared-library@feature/infra') _
 node {
 
-    notifyBuild("Started")
+    // notifyBuild("Started")
     try{
         
         stage("Build Stage"){
@@ -19,11 +19,11 @@ node {
         }
     }
     catch(e){
-        currentBuild.result = "Failed"
+        // currentBuild.result = "Failed"
         throw e
     }
-    finally{
-        notifyBuild(currentBuild.result)
-    }
+    // finally{
+    //     // notifyBuild(currentBuild.result)
+    // }
     
 }
