@@ -10,10 +10,9 @@ node {
     try{
         
         stage("Build Stage"){
-
             sh "npm install"
-            sh "export NODE_OPTIONS=--openssl-legacy-provider"
-            sh "npm run build"
+            // sh "export NODE_OPTIONS=--openssl-legacy-provider"
+            sh "npm run build --openssl-legacy-provider"
 
             archiveArtifacts artifacts: "build" 
         }
