@@ -14,7 +14,7 @@ node {
         //    sh "npm run build"
            
         }
-        archiveArtifacts artifacts: "build" 
+        // archiveArtifacts artifacts: "build" 
         }
     }
     catch(e){
