@@ -12,7 +12,7 @@ node {
         stage("Build Stage"){
             sh "npm install"
             // sh "export NODE_OPTIONS=--openssl-legacy-provider"
-            sh "npm run build"
+            sh "CI=false npm run build"
 
             archiveArtifacts artifacts: "build" 
         }
