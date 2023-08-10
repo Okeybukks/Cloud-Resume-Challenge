@@ -8,7 +8,7 @@ def cal(String buildStatus = "Started"){
         [
             "type": "section",
             "text": [
-                "type": "mrkdown"
+                "type": "mrkdown",
                 "text": "*Subject:* ${subject}"
             ]
         ],
@@ -18,7 +18,7 @@ def cal(String buildStatus = "Started"){
         [
             "type": "section",
             "text": [
-                "type": "mrkdown"
+                "type": "mrkdown",
                 "text": "*Message:* ${text}"
             ]
         ]
