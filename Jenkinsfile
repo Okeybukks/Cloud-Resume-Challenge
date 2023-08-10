@@ -9,12 +9,23 @@ node {
     notifyBuild("Started")
     try{
         
-        stage("Build Stage"){
-            sh "npm install"
-            // sh "export NODE_OPTIONS=--openssl-legacy-provider"
-            sh "CI=false npm run build"
+        // stage("Build Stage"){
+        //     sh "npm install"
+        //     sh "CI=false npm run build"
 
-            archiveArtifacts artifacts: "build/**" 
+        //     archiveArtifacts artifacts: "build/**" 
+        // }
+        stage("Deploy to S3"){
+            withCredentials([[
+                $class: 'AmazonWebServicesCredentialsBinding',
+                credentialsId: "AWS_ID",
+                accessKeyVariable: "AWS_ACCESS_KEY_ID",
+                secretKeyVariable: "AWS_SECRET_ACCESS_KEY"
+                ]]){
+                    sh 'aws --version'
+                    // copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}')    
+
+                } 
         }
     }
     catch(e){
