@@ -5,7 +5,7 @@ node {
     try{
         
         stage("Build Stage"){
-            dir('.'){
+            dir('./'){
                 sh "pwd && ls"
             }
             // sh "npm -v"
