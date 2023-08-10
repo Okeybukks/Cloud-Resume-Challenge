@@ -22,7 +22,7 @@ node {
                 accessKeyVariable: "AWS_ACCESS_KEY_ID",
                 secretKeyVariable: "AWS_SECRET_ACCESS_KEY"
                 ]]){
-                    sh 'aws --version'
+                    sh 'aws s3 ls'
                     // copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}')    
 
                 } 
