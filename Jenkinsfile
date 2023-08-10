@@ -5,12 +5,15 @@ node {
     try{
         
         stage("Build Stage"){
-            sh "npm -v"
-            sh "npm install"
-            sh "export NODE_OPTIONS=--openssl-legacy-provider"
-            sh "npm run build"
+            dir('.'){
+                sh "pwd && ls"
+            }
+            // sh "npm -v"
+            // sh "npm install"
+            // sh "export NODE_OPTIONS=--openssl-legacy-provider"
+            // sh "npm run build"
 
-            archiveArtifacts artifacts: "build" 
+            // archiveArtifacts artifacts: "build" 
         }
     }
     catch(e){
