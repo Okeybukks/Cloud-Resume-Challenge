@@ -1,3 +1,4 @@
+@Library("shared-library@feature/infra") _
 node {
 
     // slackSend color: "good", message: "Starting Deployment to s3"
@@ -20,23 +21,3 @@ node {
     }
     
 }
-
-def notifyBuild(String buildStatus = "Started"){
-        buildStatus = buildStatus ?: "Passed"
-
-        def colorCode = ""
-        def subject = "Job: ${env.JOB_NAME} Build Number: ${env.BUILD_NUMBER}"
-        def text = "The current has ${buildStatus}. Job Info: ${subject}"
-
-        if(buildStatus == "Started"){
-            colorCode = "#FFFF00"
-        }
-        else if(buildStatus == "Passed"){
-            colorCode = "#008000"
-        }
-        else{
-            colorCode = "#FF0000"
-        }
-
-        slackSend(color: colorCode, channel: "#general", message: text)
-    }
