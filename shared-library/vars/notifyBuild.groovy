@@ -1,4 +1,4 @@
-def cal(String buildStatus = "Started"){
+def call(String buildStatus = "Started"){
     buildStatus = buildStatus ?: "Passed"
 
     def colorCode = ""
