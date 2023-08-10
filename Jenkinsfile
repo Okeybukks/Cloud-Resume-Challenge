@@ -1,6 +1,11 @@
 // @Library('shared-library@feature/infra') _
 node {
 
+    checkout scmGit(
+        branches: [[name: 'feature/infra']],
+        userRemoteConfigs: [
+            [ url: 'https://github.com/Okeybukks/Cloud-Resume-Challenge.git']
+        ])
     // notifyBuild("Started")
     try{
         
