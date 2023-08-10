@@ -3,7 +3,7 @@ def call(String buildStatus = "Started"){
 
     def colorCode = ""
     def subject = "Job: ${env.JOB_NAME} Build Number: ${env.BUILD_NUMBER}"
-    def text = "Starting Deployment to s3"
+    def text = ":star: Starting Deployment to s3"
     
 
     if(buildStatus == "Started"){
@@ -11,11 +11,11 @@ def call(String buildStatus = "Started"){
     }
     else if(buildStatus == "Passed"){
         colorCode = "#008000"
-        text = "Deployment to AWS s3 was Successful"
+        text = ":white_check_mark: Deployment to AWS s3 was Successful"
     }
     else{
         colorCode = "#FF0000"
-        text = "Deployment Failed"
+        text = ":x: Deployment Failed"
     }
 
 
@@ -34,7 +34,7 @@ def call(String buildStatus = "Started"){
             "type": "section",
             "text": [
                 "type": "mrkdwn",
-                "text": "*Message:* :star: ${text}"
+                "text": "*Message:* ${text}"
             ]
         ]
     ]
