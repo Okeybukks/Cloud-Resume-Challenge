@@ -14,7 +14,7 @@ def cal(String buildStatus = "Started"){
         ],
         [
             "type": "divider"
-        ]
+        ],
         [
             "type": "section",
             "text": [
