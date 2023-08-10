@@ -4,7 +4,7 @@ def cal(String buildStatus = "Started"){
     def colorCode = ""
     def subject = "Job: ${env.JOB_NAME} Build Number: ${env.BUILD_NUMBER}"
     def text = ""
-    def blocks = [
+    blocks = [
         [
             "type": "section",
             "text": [
