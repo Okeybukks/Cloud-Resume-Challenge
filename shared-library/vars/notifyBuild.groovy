@@ -37,5 +37,5 @@ def call(String buildStatus = "Started"){
         text = "Deployment Faile"
     }
 
-    slackSend(color: colorCode, channel: "#general", blocks: blocks)
+    slackSend(color: colorCode, channel: "#general", message: "blocks")
     }
