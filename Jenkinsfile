@@ -9,13 +9,11 @@ node {
         def nodeImage = docker.image("node:lts-alpine")
         nodeImage.inside{
             sh "npm -v"
-            sh "echo ${currentBuild.currentResult}"
-        //    sh "npm install"
-        //    sh "export NODE_OPTIONS=--openssl-legacy-provider"
-        //    sh "npm run build"
-           
+            sh "npm install"
+            sh "export NODE_OPTIONS=--openssl-legacy-provider"
+            sh "npm run build" 
         }
-        // archiveArtifacts artifacts: "build" 
+        archiveArtifacts artifacts: "build" 
         }
     }
     catch(e){
