@@ -49,8 +49,8 @@ class Education extends Component {
                                                     <MdSchool />
                                                 </div>
                                                 <div className={classes.label}>
-                                                    <h2 >Internship <span>2022 - present</span></h2>
-                                                    <p>I am currently undergoing a one year diploma cloud engineering program in <a href='https://www.altschoolafrica.com/'><b>Altschool Africa</b></a></p>
+                                                    <h2 >Internship <span>2023 - present</span></h2>
+                                                    <p>I am currently a DevOps Intern at <a href='https://aibanc.co/'><b>AiBanc</b></a></p>
                                                 </div>
                                             </article>
                                         </ScrollAnimation>
