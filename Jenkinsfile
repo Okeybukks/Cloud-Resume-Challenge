@@ -9,12 +9,12 @@ node {
     notifyBuild("Started")
     try{
         
-        // stage("Build Stage"){
-        //     sh "npm install"
-        //     sh "CI=false npm run build"
+        stage("Build Stage"){
+            sh "npm install"
+            sh "CI=false npm run build"
 
-        //     archiveArtifacts artifacts: "build/**" 
-        // }
+            archiveArtifacts artifacts: "build/**" 
+        }
         stage("Deploy to S3"){
             withCredentials([[
                 $class: 'AmazonWebServicesCredentialsBinding',
@@ -22,9 +22,8 @@ node {
                 accessKeyVariable: "AWS_ACCESS_KEY_ID",
                 secretKeyVariable: "AWS_SECRET_ACCESS_KEY"
                 ]]){
-                    sh 'aws s3 ls'
-                    // copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}')    
-
+                    sh "aws s3 sync 'build/**' s3://achebeh-bucket --recursive"
+                    copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}')    
                 } 
         }
     }
