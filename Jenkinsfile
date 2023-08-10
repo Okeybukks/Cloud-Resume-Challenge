@@ -1,4 +1,4 @@
-@Library("shared-library@feature/infra") _
+@Library('shared-library@feature/infra') _
 node {
 
     // slackSend color: "good", message: "Starting Deployment to s3"
