@@ -1,4 +1,4 @@
-// @Library('shared-library@feature/infra') _
+@Library('shared-library@feature/infra') _
 node {
 
     checkout scmGit(
@@ -6,29 +6,24 @@ node {
         userRemoteConfigs: [
             [ url: 'https://github.com/Okeybukks/Cloud-Resume-Challenge.git']
         ])
-    // notifyBuild("Started")
+    notifyBuild("Started")
     try{
         
         stage("Build Stage"){
-            sh "pwd"
-            sh "ls"
-            // dir('./'){
-                
-            // }
-            // sh "npm -v"
-            // sh "npm install"
-            // sh "export NODE_OPTIONS=--openssl-legacy-provider"
-            // sh "npm run build"
 
-            // archiveArtifacts artifacts: "build" 
+            sh "npm install"
+            sh "export NODE_OPTIONS=--openssl-legacy-provider"
+            sh "npm run build"
+
+            archiveArtifacts artifacts: "build" 
         }
     }
     catch(e){
-        // currentBuild.result = "Failed"
+        currentBuild.result = "Failed"
         throw e
     }
-    // finally{
-    //     // notifyBuild(currentBuild.result)
-    // }
+    finally{
+        notifyBuild(currentBuild.result)
+    }
     
 }
