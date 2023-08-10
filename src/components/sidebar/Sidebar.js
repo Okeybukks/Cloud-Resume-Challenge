@@ -16,13 +16,13 @@ class Sidebar extends Component {
                 <h1><Link smooth to="/#start" className="h1_links">Achebe Okechukwu</Link></h1>
 
                 <img src={logo} />
-                <p style={{ color: 'black', fontWeight: 'bold' }} className="gmail"><a href="mailto:oachebe2022@gmail.com" rel="opener noreferrer" target="_blank" className="fa fa-envelope"></a> oachebe2020@gmail.com </p>
+                <p style={{ color: 'black', fontWeight: 'bold' }} className="gmail"><a href="mailto:oachebe2022@gmail.com" rel="opener noreferrer" target="_blank" className="fa fa-envelope"></a> oachebe2022@gmail.com </p>
 
                 <ul className="sidebar-nav">
                     <li className="sidebar-nav-items"><Link smooth to="/#about" className="links">About</Link></li>
                     <li className="sidebar-nav-items"><Link smooth to="/#education" className="links" >Education</Link></li>
                     <li className="sidebar-nav-items"><Link smooth to="/#interest" className="links">Interest</Link></li>
-                    {/* <li className="sidebar-nav-items"><a href="http://www.bloggingpeek.com" target="_blank" rel="opener noreferrer" className="links"> Blog<FiExternalLink/></a></li> */}
+                    <li className="sidebar-nav-items"><a href="https://okeybukks.hashnode.dev/" target="_blank" rel="opener noreferrer" className="links"> Blog<FiExternalLink/></a></li>
                 </ul>
 
                 <div className="flip-card-back">
