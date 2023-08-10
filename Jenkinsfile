@@ -5,9 +5,11 @@ node {
     try{
         
         stage("Build Stage"){
-            dir('./'){
-                sh "pwd && ls"
-            }
+            sh "pwd"
+            sh "ls"
+            // dir('./'){
+                
+            // }
             // sh "npm -v"
             // sh "npm install"
             // sh "export NODE_OPTIONS=--openssl-legacy-provider"
