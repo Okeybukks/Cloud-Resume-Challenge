@@ -8,7 +8,7 @@ def call(String buildStatus = "Started"){
         [
             "type": "section",
             "text": [
-                "type": "mrkdown",
+                "type": "mrkdwn",
                 "text": "*Subject:* ${subject}"
             ]
         ],
@@ -18,7 +18,7 @@ def call(String buildStatus = "Started"){
         [
             "type": "section",
             "text": [
-                "type": "mrkdown",
+                "type": "mrkdwn",
                 "text": "*Message:* ${text}"
             ]
         ]
@@ -37,5 +37,5 @@ def call(String buildStatus = "Started"){
         text = "Deployment Faile"
     }
 
-    slackSend(color: colorCode, channel: "#general", message: "blocks")
+    slackSend(color: colorCode, channel: "#general", blocks: blocks)
     }
