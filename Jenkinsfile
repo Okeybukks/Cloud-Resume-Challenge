@@ -1,19 +1,15 @@
 @Library('shared-library@feature/infra') _
 node {
 
-    // slackSend color: "good", message: "Starting Deployment to s3"
     notifyBuild("Started")
     try{
         
         stage("Build Stage"){
             sh "npm -v"
-            // def nodeImage = docker.image("node:lts-alpine")
-            // nodeImage.inside{
-            //     sh "npm -v"
-            //     sh "npm install"
-            //     sh "export NODE_OPTIONS=--openssl-legacy-provider"
-            //     sh "npm run build" 
-            // }
+            sh "npm install"
+            sh "export NODE_OPTIONS=--openssl-legacy-provider"
+            sh "npm run build"
+
             archiveArtifacts artifacts: "build" 
         }
     }
