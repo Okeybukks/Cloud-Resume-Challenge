@@ -33,6 +33,7 @@ class App extends Component {
             <Interest />
             <Education />
           </div>
+          
         </div>
       </Router>
     );

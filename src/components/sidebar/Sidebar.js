@@ -4,7 +4,32 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { FiExternalLink } from 'react-icons/fi';
 import logo from '../images/peter.jpg'
 
+
+async function counterFunction(url){
+    const response = await fetch(url);
+    const views = await response.json();
+    return views
+}
+
+let url = "https://yl7hit6v7ib3uqvotxacayrqhm0omtyt.lambda-url.us-east-1.on.aws/";
+
 class Sidebar extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            viewsCount: props.initialValue,
+          };
+      }
+      
+      componentDidMount() {
+
+        let count = Promise.resolve(counterFunction(url));
+        count.then(value => {
+            this.setState({ viewsCount: value });
+        })
+      }
+      
     render() {
 
         return (
@@ -35,11 +60,14 @@ class Sidebar extends Component {
                     </ul>
                 </div>
 
-                <p style={{ color: 'black', fontWeight: 'bold', fontSize: '12px' }}>Template designed by <b><a style={{ color: 'red' }} href='https://github.com/mittalsam98'>Sachin Mittal</a></b></p>
-
+                <div>
+                    <p style={{ color: 'black', fontWeight: 'bold', fontSize: '12px', marginTop: "20%"}}>Template designed by <b><a style={{ color: 'red' }} href='https://github.com/mittalsam98'>Sachin Mittal</a></b></p>
+                    <p style={{ color: 'black', fontWeight: 'bold', fontSize: '12px',}} ref={this.paragraphRef}>Visitor's Count {this.state.viewsCount}<b></b></p>
+                </div>
             </div>
         )
     }
 }
 
 export default Sidebar
+
