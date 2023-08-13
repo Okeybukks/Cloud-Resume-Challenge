@@ -23,10 +23,35 @@ class Education extends Component {
                                                     <MdWork />
                                                 </div>
                                                 <div className={classes.label}>
-                                                    <h2 >Experience  <span>April(2022)-Present</span></h2>
-                                                    <p>I am currently working as <b>Analyst, Network Surveillance</b> at <a target="_blank" href="https://www.ihstowers.com/"><b>IHS Holding Ltd</b></a> <i>(an independent owner, operator, and developer of shared telecommunications infrastructure. 
-                                                        The company provides telecommunications infrastructure to its customers, most of who are MNOs, who in turn provide wireless voice and data services to their end-users. 
-                                                        Its geographical segments are Nigeria, Sub-Saharan Africa, MENA, and Latam)</i></p>
+                                                    <h2 >Projects</h2>
+                                                    <div>
+                                                        <h6><b>Cloud Resume Challenge</b></h6>
+                                                        <p>
+                                                        Successfully completed the Cloud Resume Challenge, demonstrating proficiency in cloud technologies and DevOps practices. The template of this website was designed by <b><a style={{ color: 'red' }} href='https://github.com/mittalsam98'>Sachin Mittal</a></b>.
+                                                        I reengineered it and deployed it using AWS s3 and cloudfront services which where created using Terraform. The deployment of this website  was done with Jenkins CI/CD pipelines. 
+                                                        Additionally, I implemented a visitor count feature employing AWS DynamoDB and Lambda functions. The comprehensive project's codebase can be found within this <a style={{ color: 'red' }} target="_blank" href='https://github.com/Okeybukks/Cloud-Resume-Challenge'><b>repository</b></a>,
+                                                         underlining my practical prowess in cloud computing and web development.
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <h6><b>Creation of the CI/CD pipeline for AltSchool Capestone Project</b></h6>
+                                                        <p>
+                                                            As a team member working on implementing DevOps principles and deploying a Django application for our <a style={{ color: 'red' }} href='https://www.altschoolafrica.com/'><b>Altschool Africa</b></a> Capestone project, I took charge of creating the Jenkins CI/CD pipeline.
+
+                                                            The pipeline included several key steps:
+                                                            <ul>
+                                                                <li>Building the application's Docker image.</li>
+                                                                <li>Deploying the required AWS infrastructure using Terraform.</li>
+                                                                <li>Deploying the application to AWS EKS.</li>
+                                                                <li>Monitoring infrastructure costs using Infracost.</li>
+                                                            </ul> You can find the project files in this <a target="_blank" style={{ color: 'red' }} href='https://github.com/Okeybukks/devops-automation/tree/main'><b>Repository</b></a>
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p>Other projects can be found in this <a style={{ color: 'red' }} href='https://github.com/Okeybukks?tab=repositories'><b>Repository</b></a></p>
+                                                    </div>
+
+                                                    
                                                 </div>
                                             </article>
                                         </ScrollAnimation>
@@ -62,7 +87,7 @@ class Education extends Component {
                                                 </div>
                                                 <div className={classes.label}>
                                                     <h2 >Undergraduation at University of Nigeria, Nsukka <span>2012-2017</span></h2>
-                                                    <p>I completed my undergraduation in Mechanical Engineering from <a  target="_blank" href='https://unn.edu.ng/'><b>University of Nigeria, Nsukka</b></a> with overall 82.2%.</p>
+                                                    <p>I completed my undergraduation in Mechanical Engineering from <a  target="_blank" href='https://unn.edu.ng/'><b>University of Nigeria, Nsukka</b></a> with Second Class Upper.</p>
                                                 </div>
                                             </article>
                                         </ScrollAnimation>

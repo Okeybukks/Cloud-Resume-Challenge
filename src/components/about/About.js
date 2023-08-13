@@ -12,8 +12,10 @@ class About extends Component {
                     <h2 className={classes.heading}>Who Am I?</h2>
                     <div className={classes.About}>
                         
-                        <p>I'm a Software Engineer, and Cloud Engineering student at <b>Altschool</b>. I currently work as a System Administrator at Nautilus, xFusionCorp, a remote working platform by <a target='_blank' href='https://www.kodekloud-engineer.com/#!/tasks'><b>KodeKloud</b></a>. 
+                        <p>I'm a DevOps Engineer and currently interning at <b><a href='https://aibanc.co/'></a>AiBanc</b>. I previously worked remotely as a System Administrator at Nautilus, xFusionCorp, a remote working platform by <a target='_blank' href='https://www.kodekloud-engineer.com/#!/tasks'><b>KodeKloud</b></a>. 
                         I have a good knowledge of Linux operating system in managing of users/group, installation and configuration of packages and firewalls,managing of filesystems etc. Some of my writeups on cloud can be found <a href='https://okeybukks.hashnode.dev'><b>Here</b></a>. 
+
+                        I have worked on projects where the following DevOps tools were utilized the following tools Docker, Terraform, Kubernetes, AWS and Ansible.
                         </p>
                     </div>
                 </ScrollAnimation>

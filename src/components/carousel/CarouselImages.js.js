@@ -19,7 +19,7 @@ class CarouselImages extends Component {
                         <img className={classes.image} src={Cloud} alt="myImage" />
                         <div className={classes.h1}>
                             <h1 >I'm Okechukwu</h1>
-                            <a href="https://drive.google.com/file/d/1YQ8HrfKPnPoIxnZBDhSoMbafJSR3e5Qx/view?usp=sharing" rel="opener noreferrer" target="_blank">VIEW CV   <FaArrowCircleDown /></a>
+                            <a href="https://drive.google.com/file/d/1p9YxSIOwxmdVECvOZpBvMCif4iDqos7p/view" rel="opener noreferrer" target="_blank">VIEW CV   <FaArrowCircleDown /></a>
                         </div>
                     </div>
                     <div className={classes.image_container}>
